@@ -4,3 +4,7 @@ from router import router
 app = FastAPI()
 
 app.include_router(router)
+
+@app.get("/")
+def home():
+    return {"message": "Email service is running"}
